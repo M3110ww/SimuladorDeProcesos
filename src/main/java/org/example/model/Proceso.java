@@ -1,3 +1,5 @@
+package org.example.model;
+
 public class Proceso {
 
     public String id;
@@ -7,6 +9,7 @@ public class Proceso {
     public int espera;
 
     public Proceso(String id, int duracion, int prioridad) {
+
         this.id = id;
         this.duracion = duracion;
         this.prioridad = prioridad;

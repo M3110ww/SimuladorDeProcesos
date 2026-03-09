@@ -1,4 +1,4 @@
-package or;
+package org.example;
 
 import org.example.algoritmos.FCFS;
 import org.example.algoritmos.RobinRound;
@@ -6,7 +6,8 @@ import org.example.algoritmos.SJF;
 import org.example.algoritmos.SRTF;
 import org.example.model.Proceso;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Simulador {
 
@@ -19,18 +20,12 @@ public class Simulador {
         procesos.add(new Proceso("P3",8,3));
         procesos.add(new Proceso("P4",4,2));
 
-        FCFS.ejecutar(procesos);
+        FCFS.ejecutar(new ArrayList<>(procesos));
 
-        System.out.println();
+        SJF.ejecutar(new ArrayList<>(procesos));
 
-        SJF.ejecutar(procesos);
+        SRTF.ejecutar(new ArrayList<>(procesos));
 
-        System.out.println();
-
-        SRTF.ejecutar(procesos);
-
-        System.out.println();
-
-        RobinRound.ejecutar(procesos,2);
+        RobinRound.ejecutar(new ArrayList<>(procesos),2);
     }
 }
